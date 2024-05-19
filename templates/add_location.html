@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Add locations{% endblock %}
+
+{% block head %}
+  {{ super() }}
+    <!-- Custom styles for this page -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets//css/add_customer.css')}}">
+{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div id="flash-container">
+      <div id="flash-message" class="alert alert-success">{{ messages[0] }}</div>
+    </div>
+  {% endif %}
+{% endwith %}
+<div class="container">
+    <h1>Add Location</h1>
+    <form action="{{ url_for('sales.add_location') }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <input type="submit" value="Add Customer">
+    </form>
+    </div>
+{% endblock %}
