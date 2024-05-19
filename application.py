@@ -2,7 +2,7 @@ from flask import Flask, redirect, url_for, render_template, request, session, f
 from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta
 from sqlalchemy import or_
-
+import pymysql
 
 
 
@@ -10,7 +10,7 @@ from sqlalchemy import or_
 
 application = Flask(__name__)
 application.secret_key = "Rahe3l"
-application.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://raheel:Rahe3l.11@awseb-e-zhhhiuzqva-stack-awsebrdsdatabase-oh4dbi7w80i8.cxmysgukcd4y.ap-southeast-2.rds.amazonaws.com/ebdb'
+application.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://raheel:Rahe3l.11@awseb-e-zhhhiuzqva-stack-awsebrdsdatabase-oh4dbi7w80i8.cxmysgukcd4y.ap-southeast-2.rds.amazonaws.com/ebdb'
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
 from model import model,db, Products,locations,quantity,user
 from sales import sales
