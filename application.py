@@ -305,8 +305,8 @@ def logout():
     session.pop("user", None)
     # flash("You are G O N E!", "Error")
     return redirect(url_for("login"))
-if __name__ == '__main__':
-    print(application.config['SQLALCHEMY_DATABASE_URI'])
-    with application.app_context():
-        db.create_all()
-    application.run(debug=True)
+#if __name__ == '__main__':
+   # print(application.config['SQLALCHEMY_DATABASE_URI'])
+  #  with application.app_context():
+    db.create_all()
+ #   application.run(debug=True)
