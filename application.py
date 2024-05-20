@@ -307,6 +307,6 @@ def logout():
     return redirect(url_for("login"))
 #if __name__ == '__main__':
    # print(application.config['SQLALCHEMY_DATABASE_URI'])
-  #  with application.app_context():
+with application.app_context():
     db.create_all()
  #   application.run(debug=True)
