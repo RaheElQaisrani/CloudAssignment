@@ -10,7 +10,7 @@ import pymysql
 
 application = Flask(__name__)
 application.secret_key = "Rahe3l"
-application.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://raheel:Rahe3l.11@awseb-e-zhhhiuzqva-stack-awsebrdsdatabase-iifabnthcnja.cxmysgukcd4y.ap-southeast-2.rds.amazonaws.com/ebdb'
+application.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://raheel:Rahe3l.11@awseb-e-zhhhiuzqva-stack-awsebrdsdatabase-iifabnthcnja.cxmysgukcd4y.ap-southeast-2.rds.amazonaws.com:3306/ebdb'
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
 from model import model,db, Products,locations,quantity,user
 from sales import sales
